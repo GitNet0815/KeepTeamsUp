@@ -1,0 +1,12 @@
+Similarly, as you are an experienced python programmer with a lot of expertise. write  a python program using the pyautogui library to:
+- open the MS teams app
+- or bring it to the foreground if already opened
+- The updated version will check if MS Teams is already the active window. If it's not, it will bring it to the foreground using Alt+Tab
+- click on the 'chat' icon, using the picture 'chat1.png' or 'chat2.png' 
+- click on the 'Activity' icon, using the picture 'chat1.png' or 'chat2.png' 
+- click on the 'chat' icon, using the picture 'activity1.png' or 'activity2.png' 
+- Add a loop so that the program runs every minute
+- Add a feature to minimize the window after the click
+
+
+pyinstaller.exe --onefile --runtime-tmpdir=. --hidden-import win32timezone teamsCaffeine.py
