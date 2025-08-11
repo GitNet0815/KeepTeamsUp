@@ -1,3 +1,4 @@
+# Keeps Teams status green
 import pyautogui
 import time
 import subprocess
