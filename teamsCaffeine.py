@@ -5,13 +5,13 @@ import subprocess
 import pygetwindow as gw
 
 # Chat 1
-chat1 = "D:\\Dev\\Python\\WinTools\\TeamsCaffeine\\chat1.png"
+chat1 = "Pics\\chat1.png"
 # chat 2
-chat2 = "D:\\Dev\\Python\\WinTools\\TeamsCaffeine\\chat1.png"
+chat2 = "Pics\\chat2.png"
 # Activity 1
-activity1 = "D:\\Dev\\Python\\WinTools\\TeamsCaffeine\\activity1.png"
+activity1 = "Pics\\activity1.png"
 # Activity 2
-activity2 = "D:\\Dev\\Python\\WinTools\\TeamsCaffeine\\activity2.png"
+activity2 = "Pics\\activity2.png"
 
 
 # Optional safety
