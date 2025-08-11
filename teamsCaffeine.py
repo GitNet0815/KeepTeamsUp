@@ -109,8 +109,8 @@ if __name__ == "__main__":
         print("Cycle completed. Waiting for the next cycle...")
         
         # Wait for the next cycle to start (60 seconds in total)
-        time.sleep(300)  # 60 seconds = 1 minute
-        # Countdown for 60 seconds with updates every 5 seconds
-        for remaining in range(300, 0, -5):
+        # time.sleep(240)  # 240 seconds = 4 minutes
+        # Countdown for 240 seconds with updates every 5 seconds
+        for remaining in range(240, 0, -5):
             print(f"Next cycle will start in {remaining} seconds...")
             time.sleep(5)  # Wait for 5 seconds before updating the countdown
