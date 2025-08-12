@@ -8,5 +8,13 @@ Similarly, as you are an experienced python programmer with a lot of expertise. 
 - Add a loop so that the program runs every minute
 - Add a feature to minimize the window after the click
 
+- add a tray icon with menu top start/stop/quit
+- split in 2 libraries
+- asynchronous function call using the asyncio library
+- Maintains a flag (is_loop_running) to check whether the loop is running.
+- Creates the Menu Dynamically: When the loop state changes, updates the menu to add or remove the checkmark.
+- The tray is started in a separate thread (tray_thread) so that it runs concurrently with the loop.
 
-pyinstaller.exe --onefile --runtime-tmpdir=. --hidden-import win32timezone teamsCaffeine.py
+D:\Dev\Python\WinTools\TeamsCaffeine\keepTeamsTray.py
+
+pyinstaller.exe --onefile --runtime-tmpdir=. --hidden-import win32timezone keepTeamsTray.py
