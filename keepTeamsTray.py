@@ -23,7 +23,7 @@ def quit_app(icon, _item):
 def create_tray_icon():
     icon_image = Image.new('RGB', (64, 64), color=(255, 255, 255))
     draw = ImageDraw.Draw(icon_image)
-    draw.rectangle((0, 0, 64, 64), fill=(0, 0, 0))
+    draw.rectangle((0, 0, 64, 64), fill=(0, 100, 0))
     
     # Create the tray icon with the menu
     icon = pystray.Icon("Teams Automation", icon_image, menu=pystray.Menu(
@@ -69,7 +69,7 @@ async def testFunc():
     print("Starting a new cycle in testFunc...")
 
     # Countdown for 60 seconds with updates every 1 second for responsiveness
-    total_countdown_time = 30
+    total_countdown_time = 180
     sleep_interval = 10 
     for i in range(total_countdown_time // sleep_interval):
         if not is_loop_running or stop_event.is_set():
@@ -94,7 +94,7 @@ async def testFunc():
 
     print("Cycle completed. Waiting for the next cycle...")
     
-    # Wait for 60 seconds before the next cycle, with frequent checks
+    # Wait for x seconds before the next cycle, with frequent checks
     total_wait_time = 0
     for i in range(total_wait_time // sleep_interval):
         if not is_loop_running or stop_event.is_set():

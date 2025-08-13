@@ -1,0 +1,1 @@
+pyinstaller.exe --onefile --runtime-tmpdir=. --name=keepTeamsApp --hidden-import win32timezone keepTeamsTray.py 
