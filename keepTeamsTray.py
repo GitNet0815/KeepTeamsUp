@@ -4,9 +4,14 @@ import pystray
 from pystray import MenuItem as item
 import threading
 import time
+import os
 import asyncio
 from PIL import Image, ImageDraw
 from keepTeams import keepTeamsActive
+
+# Path to the icon file
+ICON_PATH = os.path.join(os.path.dirname(__file__), 'assets', 'clock_64.ico')
+
 
 # Global flag to control the loop
 is_loop_running = False
@@ -21,9 +26,11 @@ def quit_app(icon, _item):
 
 # Function to create tray icon and menu
 def create_tray_icon():
-    icon_image = Image.new('RGB', (64, 64), color=(255, 255, 255))
-    draw = ImageDraw.Draw(icon_image)
-    draw.rectangle((0, 0, 64, 64), fill=(0, 100, 0))
+    # icon_image = Image.new('RGB', (64, 64), color=(255, 255, 255))
+    icon_image = Image.open(ICON_PATH)
+
+    # draw = ImageDraw.Draw(icon_image)
+    # draw.rectangle((0, 0, 64, 64), fill=(0, 100, 0))
     
     # Create the tray icon with the menu
     icon = pystray.Icon("Teams Automation", icon_image, menu=pystray.Menu(
