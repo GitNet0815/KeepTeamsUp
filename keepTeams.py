@@ -3,16 +3,26 @@ import pyautogui
 import time
 import subprocess
 import pygetwindow as gw
-import asyncio
+import os
+import sys
 
-# Chat 1
-chat1 = "Pics\\chat1.png"
-# chat 2
-chat2 = "Pics\\chat2.png"
-# Activity 1
-activity1 = "Pics\\activity1.png"
-# Activity 2
-activity2 = "Pics\\activity2.png"
+# Determine base path (current folder for script or PyInstaller exe)
+if getattr(sys, 'frozen', False):
+    # Running as a PyInstaller executable
+    base_path = sys._MEIPASS
+else:
+    # Running as a normal Python script
+    base_path = os.path.dirname(os.path.abspath(__file__))
+
+# Pics subfolder path
+pics_path = os.path.join(base_path, "assets")
+
+# Chat images
+chat1 = os.path.join(pics_path, "chat1.png")
+chat2 = os.path.join(pics_path, "chat2.png")
+activity1 = os.path.join(pics_path, "activity1.png")
+activity2 = os.path.join(pics_path, "activity2.png")
+
 
 
 # Optional safety
