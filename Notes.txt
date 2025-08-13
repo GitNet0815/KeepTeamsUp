@@ -1,0 +1,24 @@
+Build
+
+# 0) Simple
+pyinstaller.exe --noconsole --onefile --runtime-tmpdir=. --name=keepTeamsApp --hidden-import win32timezone keepTeamsTray.py 
+
+pyinstaller.exe --onefile --runtime-tmpdir=. --hidden-import win32timezone keepTeamsTray.py
+
+# 1) isolate
+py -3.12 -m venv .venv && .venv\Scripts\activate
+pip install --upgrade pip pyinstaller
+
+# 2) freeze (one-file GUI app, custom icon)
+pyinstaller --noconsole --onefile --name MyTool ^
+  --icon assets\app.ico ^
+  --add-data "assets\*.png;assets" ^
+  --hidden-import "pkg_resources.py2_warn" ^
+  src\main.py
+
+common flags
+--onefile (single exe) vs default onedir (fewer AV false positives, faster start).
+--noconsole for GUI apps; omit for CLI.
+--collect-data pkgname and --collect-submodules pkgname for packages that load data/plugins dynamically.
+--clean --log-level=WARN for tidy builds.
+--uac-admin only if elevation is absolutely needed.
